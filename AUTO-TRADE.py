@@ -1,20 +1,10 @@
-
-# coding: utf-8
-
-# In[1]:
-
-
 import time
 import pyupbit
 import datetime
 
-access = "sOtRs1xAQJwUqlXpx6IpVrGvyzmxjJJiN7C8uNCx"
-secret = "LBiUnoN6hOKDqZSRdT7x7pJ9FbPLrBBX2lcyY2s7"
+access = "access key"
+secret = "secret key"
 tkicker = "KRW-BTC"
-
-
-
-# In[2]:
 
 
 def get_target_price(ticker, k):
@@ -43,10 +33,6 @@ def get_balance(ticker):
 def get_current_price(ticker):
     """현재가 조회"""
     return pyupbit.get_orderbook(ticker=ticker)["orderbook_units"][0]["ask_price"]
-
-
-# In[3]:
-
 
 # 로그인
 upbit = pyupbit.Upbit(access, secret)
@@ -79,13 +65,4 @@ while True:
         print(e)
         time.sleep(1)
 
-
-# In[ ]:
-
-
-pirnt(now)
-print("Target")  
-print(target_price)
-print("Current")  
-print(current_price)
 
